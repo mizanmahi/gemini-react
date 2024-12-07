@@ -1,6 +1,10 @@
 name: Ready the code and deploy
 
-on: [push, workflow_dispatch]
+on:
+   push:
+      branches:
+         - 'main'
+         - 'release/**'
 
 jobs:
    test-code:
