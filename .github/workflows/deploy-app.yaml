@@ -8,9 +8,17 @@ jobs:
       steps:
          - name: copying the codes
            uses: actions/checkout@v4
+
          - name: install node-js
            uses: actions/setup-node@v4
            with:
               node-version: 20.15
+
          - name: check node version
            run: node -v
+
+         - name: install dependencies
+           run: yarn install --frozen-lockfile
+
+         - name: Run the tests
+           run: yarn test
