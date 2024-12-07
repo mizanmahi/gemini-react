@@ -39,3 +39,9 @@ jobs:
 
          - name: Build the codes
            run: yarn build
+
+   deploy-code:
+      runs-on: ubuntu-latest
+      steps:
+         - name: Deploy the codes
+           run: echo "deploying...."
