@@ -1,6 +1,8 @@
 name: Ready the code and deploy
 
 on:
+   pull_request:
+      types: opened
    push:
       branches:
          - 'main'
