@@ -25,6 +25,7 @@ jobs:
 
    build-code:
       runs-on: ubuntu-latest
+      needs: test-code
       steps:
          - name: install node-js
            uses: actions/setup-node@v4
@@ -42,6 +43,7 @@ jobs:
 
    deploy-code:
       runs-on: ubuntu-latest
+      needs: build-code
       steps:
          - name: Deploy the codes
            run: echo "deploying...."
