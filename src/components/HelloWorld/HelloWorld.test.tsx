@@ -6,6 +6,6 @@ import HelloWorld from './HelloWorld';
 describe('Testing Hello World Component', () => {
    it('Should Render the Hello World', () => {
       render(<HelloWorld />);
-      expect(screen.getByRole('heading', { level: 2 })).toBeInTheDocument();
+      expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument();
    });
 });
