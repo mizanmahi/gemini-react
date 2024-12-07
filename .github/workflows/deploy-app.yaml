@@ -6,7 +6,11 @@ jobs:
    test-code:
       runs-on: ubuntu-latest
       steps:
-         - name: print working directory
-           run: |
-              node -v
-              git --version
+         - name: copying the codes
+           uses: actions/checkout@v4
+         - name: install node-js
+           uses: actions/setup-node@v4
+           with:
+              node-version: 20.15
+         - name: check node version
+           run: node -v
